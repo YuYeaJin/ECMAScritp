@@ -41,4 +41,7 @@ testLet = "let chabged";
 // 데이터가 할당되었을 때, 그 타입이 결정
 
 let v = "This is String";
+// 데이터 타입을 확인하고자 할 떄, typeof 키워드 사용
+console.log(v, "->", typeof v);
+v = 2024;
 console.log(v, "->", typeof v);

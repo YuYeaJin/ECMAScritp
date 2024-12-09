@@ -22,3 +22,23 @@ console.log("Process Platform:", process.platform);
 console.log("Process Architecture:", process.arch);
 
 console.log("==================");
+
+// var, let, const
+
+var testVar = "var";    // ES6 이전 JS방식
+var testLest = "let";   // 재할당 가능(mutable)
+const TEST_CONST = "const";     // 재할당 불가(immutable)
+
+// 변경
+testVar = "var chabged";
+testLet = "let chabged";
+// TEST_CONST = "const changed";       -> Error: const는 재할당 불가
+
+// ES6 지원 환경에서는 let, const사용
+// 우선 const를 먼저 고려 -> 값이 바뀌는 것이 자연스러울 경우 let으로 교체 
+
+// 자바스크립트는 데이터 타입이 고정되지 않음
+// 데이터가 할당되었을 때, 그 타입이 결정
+
+let v = "This is String";
+console.log(v, "->", typeof v);

@@ -4,7 +4,7 @@
 // console.log("command3");
 
 // timer 함수
-// setTimeout(callback, delay)
+// 타이머 생성 : setTimeout(callback, delay)
 function timerTest() {
     console.log("2초 후에 인사합니다.");
     setTimeout(() => {
@@ -14,6 +14,7 @@ function timerTest() {
 }
 // timerTest();
 
+// 타이머 해제: clearTimeout(timeId)
 function intervalTest() {
     //interval : 특정 시간 간격으로 호출되는 함수
     let count = 10;

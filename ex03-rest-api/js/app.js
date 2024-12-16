@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     addTodoButton.addEventListener("click", (event) => {
         //  #new-todo 입력 상자의 값을 가지고 와서
         //  새 todo item 항목을 만들어 서버로 전송(post 방식)
-        const title = newTodoInput.ariaValueMax.trim();
+        const title = newTodoInput.value.trim();
         if (title) {
             //  타이틀이 비어있지 않으면 서버로 전송
             fetch(apiUrl, {
-                method: "POST",
+                method: "POST", // 생성
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
             })
             .then((response) => response.json())
-            .thes(todo => {
+            .then(todo => {
                 addTodoToDOM(todo);
                 newTodoInput.value = "";
             })
             .catch(error => console.error("Error adding TODO:", error))
         }
-        newTodoInput.fucos();
+        newTodoInput.focus();
     });
 
     // Delete TODO

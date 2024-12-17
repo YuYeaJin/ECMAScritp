@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>${todo.title}</span>
             <button onclick="deleteTodo(${todo.id})">Delete</button>
         `;
+        //  css 클래스 설정
         li.className = "todo-ltem";
         todoList.appendChild(li);
     }
